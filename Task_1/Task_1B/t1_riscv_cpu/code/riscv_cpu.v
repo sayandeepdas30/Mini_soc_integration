@@ -1,4 +1,3 @@
-
 // riscv_cpu.v - single-cycle RISC-V CPU Processor
 
 module riscv_cpu (
@@ -11,17 +10,18 @@ module riscv_cpu (
     output [31:0] Result
 );
 
-wire        ALUSrc, RegWrite, Jump, Zero;
-wire [1:0]  ResultSrc, ImmSrc;
-wire [2:0]  ALUControl;
+wire        ALUSrc, RegWrite, Jump, Jalr, Zero, SLT, SLTU, PCSrc;
+wire [1:0]  ResultSrc;
+wire [2:0]  ImmSrc;
+wire [3:0]  ALUControl;
+wire [2:0]  Funct3;
 
-controller  c   (Instr[6:0], Instr[14:12], Instr[30], Zero,
-                ResultSrc, MemWrite, PCSrc, ALUSrc, RegWrite, Jump,
-                ImmSrc, ALUControl);
+controller  c   (Instr[6:0], Instr[14:12], Instr[30], Zero, SLT, SLTU,
+                ResultSrc, MemWrite, PCSrc, ALUSrc, RegWrite, Jump, Jalr,
+                ImmSrc, ALUControl, Funct3);
 
 datapath    dp  (clk, reset, ResultSrc, PCSrc,
-                ALUSrc, RegWrite, ImmSrc, ALUControl,
-                Zero, PC, Instr, Mem_WrAddr, Mem_WrData, ReadData, Result);
+                ALUSrc, RegWrite, ImmSrc, ALUControl, Jalr, Funct3,
+                Zero, SLT, SLTU, PC, Instr, Mem_WrAddr, Mem_WrData, ReadData, Result);
 
 endmodule
-

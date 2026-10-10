@@ -1,0 +1,296 @@
+# do t1_riscv_cpu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/t1_riscv_cpu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/t1_riscv_cpu.v 
+# -- Compiling module t1_riscv_cpu
+# 
+# Top level modules:
+# 	t1_riscv_cpu
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/riscv_cpu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/riscv_cpu.v 
+# -- Compiling module riscv_cpu
+# 
+# Top level modules:
+# 	riscv_cpu
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/data_mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/data_mem.v 
+# -- Compiling module data_mem
+# 
+# Top level modules:
+# 	data_mem
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/reset_ff.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/reset_ff.v 
+# -- Compiling module reset_ff
+# 
+# Top level modules:
+# 	reset_ff
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/reg_file.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/reg_file.v 
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:17 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux4.v 
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# End time: 23:29:17 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux3.v 
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# End time: 23:29:18 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/mux2.v 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 23:29:18 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/main_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/main_decoder.v 
+# -- Compiling module main_decoder
+# 
+# Top level modules:
+# 	main_decoder
+# End time: 23:29:18 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/imm_extend.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/imm_extend.v 
+# -- Compiling module imm_extend
+# 
+# Top level modules:
+# 	imm_extend
+# End time: 23:29:18 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/datapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/datapath.v 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 23:29:18 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:18 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/alu_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:19 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/alu_decoder.v 
+# -- Compiling module alu_decoder
+# 
+# Top level modules:
+# 	alu_decoder
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:19 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:19 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/components/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/instr_mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:19 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/code/instr_mem.v 
+# -- Compiling module instr_mem
+# 
+# Top level modules:
+# 	instr_mem
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test {C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test/tb_1c.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:19 on Oct 03,2026
+# vlog -vlog01compat -work work "+incdir+C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test" C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test/tb_1c.v 
+# -- Compiling module tb_1c
+# 
+# Top level modules:
+# 	tb_1c
+# End time: 23:29:19 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_1c
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_1c 
+# Start time: 23:29:19 on Oct 03,2026
+# Loading work.tb_1c
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hemal Dedhia  Hostname: LAPTOP-TMV8P0B5  ProcessID: 21296
+#           Attempting to use alternate WLF file "./wlftncnxj1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftncnxj1
+# view structure
+# view signals
+# run -all
+# 1. addi implementation is correct for x0 
+# 2. addi implementation is correct 
+# 3. slli implementation is correct 
+# 4. slti implementation is correct 
+# 5. sltiu implementation is correct 
+# 6. xori implementation is correct 
+# 7. srli implementation is correct 
+# 8. srai implementation is correct 
+# 9. ori implementation is correct 
+# 10. andi implementation is correct
+# 11. add implementation is correct 
+# 12. sub implementation is correct 
+# 13. sll implementation is correct 
+# 14. slt implementation is correct 
+# 15. sltu implementation is correct 
+# 16. xor implementation is correct 
+# 17. srl implementation is correct 
+# 18. sra implementation is correct 
+# 19. or implementation is correct 
+# 20. and implementation is correct 
+# 21. lui implementation is correct 
+# 22. auipc implementation is correct 
+# 23. sb implementation is correct
+# 24. sh implementation is correct
+# 25. sw implementation is correct
+# 26. lb implementation is correct
+# 27. lh implementation is correct
+# 28. lw implementation is correct
+# 29. lbu implementation is correct
+# 30. lhu implementation is correct
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt is executing
+# 31. blt implementation is correct 
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge is executing
+# 32. bge implementation is correct
+# 33. bltu is executing
+# 33. bltu is executing
+# 33. bltu is executing
+# 33. bltu is executing
+# 33. bltu implementation is correct 
+# 34. bgeu is executing
+# 34. bgeu is executing
+# 34. bgeu is executing
+# 34. bgeu is executing
+# 34. bgeu is executing
+# 34. bgeu implementation is correct 
+# 35. bne is executing
+# 35. bne is executing
+# 35. bne is executing
+# 35. bne is executing
+# 35. bne is executing
+# 35. bne implementation is correct 
+# 36. beq is executing
+# 36. beq is executing
+# 36. beq implementation is correct 
+# 37. jalr implementation is correct 
+# 38. jal implementation is correct 
+# Faulty Instructions =>           0
+# No errors encountered, congratulations!
+# ** Note: $stop    : C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test/tb_1c.v(533)
+#    Time: 1705 ns  Iteration: 1  Instance: /tb_1c
+# Break in Module tb_1c at C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test/tb_1c.v line 533
+# Stopped at C:/Users/hemal/OneDrive/Desktop/Eyantra/Task_1/Task_1B/t1_riscv_cpu/.test/tb_1c.v line 533
+#  quit -f
+# End time: 23:29:20 on Oct 03,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2

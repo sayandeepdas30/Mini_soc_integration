@@ -9,4 +9,3 @@ module adder #(parameter WIDTH = 32) (
 assign sum = a + b;
 
 endmodule
-

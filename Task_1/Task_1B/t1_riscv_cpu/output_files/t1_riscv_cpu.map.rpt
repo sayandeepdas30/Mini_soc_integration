@@ -1,0 +1,600 @@
+Analysis & Synthesis report for t1_riscv_cpu
+Fri Oct 09 23:27:57 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux3:pcmux
+ 12. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg
+ 13. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|adder:pcadd4
+ 14. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch
+ 15. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|reg_file:rf
+ 16. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux
+ 17. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|alu:alu
+ 18. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux2:a
+ 19. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux4:resultmux
+ 20. Parameter Settings for User Entity Instance: instr_mem:instrmem
+ 21. Parameter Settings for User Entity Instance: data_mem:datamem
+ 22. Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4"
+ 23. Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 09 23:27:57 2026       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; t1_riscv_cpu                                ;
+; Top-level Entity Name              ; t1_riscv_cpu                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,364                                       ;
+;     Total combinational functions  ; 2,924                                       ;
+;     Dedicated logic registers      ; 1,536                                       ;
+; Total registers                    ; 1536                                        ;
+; Total pins                         ; 228                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; t1_riscv_cpu       ; t1_riscv_cpu       ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; code/t1_riscv_cpu.v              ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v            ;         ;
+; code/riscv_cpu.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/riscv_cpu.v               ;         ;
+; code/instr_mem.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v               ;         ;
+; code/data_mem.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/data_mem.v                ;         ;
+; code/components/reset_ff.v       ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/reset_ff.v     ;         ;
+; code/components/reg_file.v       ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/reg_file.v     ;         ;
+; code/components/mux4.v           ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux4.v         ;         ;
+; code/components/mux3.v           ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux3.v         ;         ;
+; code/components/mux2.v           ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux2.v         ;         ;
+; code/components/main_decoder.v   ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/main_decoder.v ;         ;
+; code/components/imm_extend.v     ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/imm_extend.v   ;         ;
+; code/components/datapath.v       ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v     ;         ;
+; code/components/controller.v     ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/controller.v   ;         ;
+; code/components/alu_decoder.v    ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/alu_decoder.v  ;         ;
+; code/components/alu.v            ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/alu.v          ;         ;
+; code/components/adder.v          ; yes             ; User Verilog HDL File                       ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/adder.v        ;         ;
+; code/rv32i_test_1c.hex           ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/rv32i_test_1c.hex         ;         ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,364     ;
+;                                             ;           ;
+; Total combinational functions               ; 2924      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 2395      ;
+;     -- 3 input functions                    ; 430       ;
+;     -- <=2 input functions                  ; 99        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2831      ;
+;     -- arithmetic mode                      ; 93        ;
+;                                             ;           ;
+; Total registers                             ; 1536      ;
+;     -- Dedicated logic registers            ; 1536      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 228       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1536      ;
+; Total fan-out                               ; 16126     ;
+; Average fan-out                             ; 3.28      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name  ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+--------------+
+; |t1_riscv_cpu                ; 2924 (118)          ; 1536 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1_riscv_cpu                                               ; t1_riscv_cpu ; work         ;
+;    |data_mem:datamem|        ; 352 (352)           ; 512 (512)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|data_mem:datamem                              ; data_mem     ; work         ;
+;    |instr_mem:instrmem|      ; 192 (192)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|instr_mem:instrmem                            ; instr_mem    ; work         ;
+;    |riscv_cpu:rvcpu|         ; 2262 (0)            ; 1024 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu                               ; riscv_cpu    ; work         ;
+;       |controller:c|         ; 35 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|controller:c                  ; controller   ; work         ;
+;          |alu_decoder:ad|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad   ; alu_decoder  ; work         ;
+;          |main_decoder:md|   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|controller:c|main_decoder:md  ; main_decoder ; work         ;
+;       |datapath:dp|          ; 2227 (12)           ; 1024 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                   ; datapath     ; work         ;
+;          |adder:pcadd4|      ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcadd4      ; adder        ; work         ;
+;          |adder:pcaddbranch| ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch ; adder        ; work         ;
+;          |alu:alu|           ; 465 (465)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu           ; alu          ; work         ;
+;          |imm_extend:ext|    ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext    ; imm_extend   ; work         ;
+;          |mux2:srcbmux|      ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux      ; mux2         ; work         ;
+;          |mux3:pcmux|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux3:pcmux        ; mux3         ; work         ;
+;          |mux4:resultmux|    ; 141 (141)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux    ; mux4         ; work         ;
+;          |reg_file:rf|       ; 1426 (1426)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reg_file:rf       ; reg_file     ; work         ;
+;          |reset_ff:pcreg|    ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg    ; reset_ff     ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++---------------------------------------------------------+---------------------------------------------+
+; Register name                                           ; Reason for Removal                          ;
++---------------------------------------------------------+---------------------------------------------+
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~0  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~31 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~1  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~30 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~2  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~29 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~3  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~28 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~4  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~27 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~5  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~26 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~6  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~25 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~7  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~24 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~8  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~23 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~9  ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~22 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~10 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~21 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~11 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~20 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~12 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~19 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~13 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~18 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~14 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~17 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~15 ; Stuck at GND due to stuck port clock_enable ;
+; riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr~16 ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32                  ;                                             ;
++---------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1536  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1506  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[0]  ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|ShiftRight0  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|ShiftRight0  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux9  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|ShiftRight0  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux20 ;
+; 15:1               ; 30 bits   ; 300 LEs       ; 120 LEs              ; 180 LEs                ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux16        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux13 ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 24 LEs               ; 32 LEs                 ; No         ; |t1_riscv_cpu|WriteData                                        ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 16 LEs               ; 40 LEs                 ; No         ; |t1_riscv_cpu|WriteData                                        ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 16 LEs               ; 40 LEs                 ; No         ; |t1_riscv_cpu|WriteData                                        ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 16 LEs               ; 40 LEs                 ; No         ; |t1_riscv_cpu|WriteData                                        ;
+; 7:1                ; 25 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[18] ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |t1_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[1]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux3:pcmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|adder:pcadd4 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|reg_file:rf ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|alu:alu ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux2:a ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux4:resultmux ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instr_mem:instrmem ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                         ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                         ;
+; MEM_SIZE       ; 512   ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: data_mem:datamem ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                       ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                       ;
+; MEM_SIZE       ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                           ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                           ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 228                         ;
+; cycloneiii_ff         ; 1536                        ;
+;     CLR SLD           ; 30                          ;
+;     ENA               ; 1504                        ;
+;     ENA CLR           ; 1                           ;
+;     ENA CLR SLD       ; 1                           ;
+; cycloneiii_lcell_comb ; 2924                        ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 63                          ;
+;     normal            ; 2831                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 367                         ;
+;         4 data inputs ; 2395                        ;
+;                       ;                             ;
+; Max LUT depth         ; 28.00                       ;
+; Average LUT depth     ; 20.76                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Oct 09 23:27:42 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off t1_riscv_cpu -c t1_riscv_cpu
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file code/t1_riscv_cpu.v
+    Info (12023): Found entity 1: t1_riscv_cpu File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file code/riscv_cpu.v
+    Info (12023): Found entity 1: riscv_cpu File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/riscv_cpu.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file code/instr_mem.v
+    Info (12023): Found entity 1: instr_mem File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/data_mem.v
+    Info (12023): Found entity 1: data_mem File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/data_mem.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/reset_ff.v
+    Info (12023): Found entity 1: reset_ff File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/reset_ff.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/reg_file.v
+    Info (12023): Found entity 1: reg_file File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/reg_file.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux4.v
+    Info (12023): Found entity 1: mux4 File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux4.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux3.v
+    Info (12023): Found entity 1: mux3 File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux3.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux2.v
+    Info (12023): Found entity 1: mux2 File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/mux2.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/main_decoder.v
+    Info (12023): Found entity 1: main_decoder File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/main_decoder.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/imm_extend.v
+    Info (12023): Found entity 1: imm_extend File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/imm_extend.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/datapath.v
+    Info (12023): Found entity 1: datapath File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/controller.v
+    Info (12023): Found entity 1: controller File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/controller.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/alu_decoder.v
+    Info (12023): Found entity 1: alu_decoder File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/alu_decoder.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file code/components/adder.v
+    Info (12023): Found entity 1: adder File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/adder.v Line: 4
+Info (12127): Elaborating entity "t1_riscv_cpu" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at t1_riscv_cpu.v(23): truncated value with size 32 to match size of target (1) File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v Line: 23
+Info (12128): Elaborating entity "riscv_cpu" for hierarchy "riscv_cpu:rvcpu" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v Line: 19
+Info (12128): Elaborating entity "controller" for hierarchy "riscv_cpu:rvcpu|controller:c" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/riscv_cpu.v Line: 21
+Info (12128): Elaborating entity "main_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|main_decoder:md" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/controller.v Line: 24
+Info (12128): Elaborating entity "alu_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|alu_decoder:ad" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/controller.v Line: 26
+Info (12128): Elaborating entity "datapath" for hierarchy "riscv_cpu:rvcpu|datapath:dp" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/riscv_cpu.v Line: 25
+Info (12128): Elaborating entity "mux3" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux3:pcmux" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 26
+Info (12128): Elaborating entity "reset_ff" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 28
+Info (12128): Elaborating entity "adder" for hierarchy "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 29
+Info (12128): Elaborating entity "reg_file" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reg_file:rf" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 33
+Info (12128): Elaborating entity "imm_extend" for hierarchy "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 34
+Info (12128): Elaborating entity "mux2" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 37
+Info (12128): Elaborating entity "alu" for hierarchy "riscv_cpu:rvcpu|datapath:dp|alu:alu" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 38
+Info (12128): Elaborating entity "mux4" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux4:resultmux" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/datapath.v Line: 117
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:instrmem" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v Line: 20
+Warning (10850): Verilog HDL warning at instr_mem.v(15): number of words (79) in memory file does not match the number of elements in the address range [0:511] File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v Line: 15
+Warning (10030): Net "instr_ram.data_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v Line: 10
+Warning (10030): Net "instr_ram.waddr_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v Line: 10
+Warning (10030): Net "instr_ram.we_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/instr_mem.v Line: 10
+Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:datamem" File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/t1_riscv_cpu.v Line: 21
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "data_mem:datamem|data_ram" is uninferred due to asynchronous read logic File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/data_mem.v Line: 11
+    Info (276007): RAM logic "riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr" is uninferred due to asynchronous read logic File: C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/code/components/reg_file.v Line: 15
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/User/Downloads/lq_2603_task1c/lq_2603_task1c/t1_riscv_cpu/db/t1_riscv_cpu.ram0_instr_mem_8ff0214b.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4657 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 161 output pins
+    Info (21061): Implemented 4429 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Fri Oct 09 23:27:57 2026
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:29
+
+

@@ -1,4 +1,3 @@
-
 // reg_file.v - register file for single-cycle RISC-V CPU
 //              (with 32 registers, each of 32 bits)
 //              having two read ports, one write port
@@ -18,18 +17,17 @@ reg [DATA_WIDTH-1:0] reg_file_arr [0:31];
 integer i;
 initial begin
     for (i = 0; i < 32; i = i + 1) begin
-        reg_file_arr[i] = 0;
+        reg_file_arr[i] = {DATA_WIDTH{1'b0}};
     end
 end
 
 // register file write logic (synchronous)
 always @(posedge clk) begin
-    if (wr_en) reg_file_arr[wr_addr] <= wr_data;
+    if (wr_en && (wr_addr != 5'b0)) reg_file_arr[wr_addr] <= wr_data;
 end
 
 // register file read logic (combinational)
-assign rd_data1 = ( rd_addr1 != 0 ) ? reg_file_arr[rd_addr1] : 0;
-assign rd_data2 = ( rd_addr2 != 0 ) ? reg_file_arr[rd_addr2] : 0;
+assign rd_data1 = (rd_addr1 == 5'b0) ? {DATA_WIDTH{1'b0}} : reg_file_arr[rd_addr1];
+assign rd_data2 = (rd_addr2 == 5'b0) ? {DATA_WIDTH{1'b0}} : reg_file_arr[rd_addr2];
 
 endmodule
-
