@@ -1,0 +1,1071 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do run_all.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:55:10 on Oct 15,2026
+# vlog code/data_mem.v code/instr_mem.v code/riscv_cpu.v code/t1_riscv_cpu.v code/components/adder.v code/components/alu.v code/components/alu_decoder.v code/components/controller.v code/components/datapath.v code/components/imm_extend.v code/components/main_decoder.v code/components/mux2.v code/components/mux3.v code/components/mux4.v code/components/reg_file.v code/components/reset_ff.v .test/tb_rv32ui.v 
+# -- Compiling module data_mem
+# -- Compiling module instr_mem
+# -- Compiling module riscv_cpu
+# -- Compiling module t1_riscv_cpu
+# -- Compiling module adder
+# -- Compiling module alu
+# -- Compiling module alu_decoder
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module imm_extend
+# -- Compiling module main_decoder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module mux4
+# -- Compiling module reg_file
+# -- Compiling module reset_ff
+# -- Compiling module tb_rv32ui
+# 
+# Top level modules:
+# 	tb_rv32ui
+# End time: 12:55:10 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/add.hex" 
+# Start time: 12:55:10 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/add.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4495 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:10 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/addi.hex" 
+# Start time: 12:55:11 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/addi.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2265 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:11 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/and.hex" 
+# Start time: 12:55:11 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/and.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4695 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:11 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/andi.hex" 
+# Start time: 12:55:11 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/andi.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 1825 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:12 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/auipc.hex" 
+# Start time: 12:55:12 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/auipc.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 435 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:12 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/beq.hex" 
+# Start time: 12:55:12 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/beq.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:12 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/bge.hex" 
+# Start time: 12:55:12 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/bge.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2935 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:13 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/bgeu.hex" 
+# Start time: 12:55:13 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/bgeu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 3185 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:13 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/blt.hex" 
+# Start time: 12:55:13 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/blt.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:13 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/bltu.hex" 
+# Start time: 12:55:13 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/bltu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 3005 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:13 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/bne.hex" 
+# Start time: 12:55:14 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/bne.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:14 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/jal.hex" 
+# Start time: 12:55:14 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/jal.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 395 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:14 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/jalr.hex" 
+# Start time: 12:55:14 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/jalr.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 995 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:14 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lb.hex" 
+# Start time: 12:55:14 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lb.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2135 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:15 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lbu.hex" 
+# Start time: 12:55:15 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lbu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2135 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:15 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/ld_st.hex" 
+# Start time: 12:55:15 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/ld_st.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 9475 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:15 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lh.hex" 
+# Start time: 12:55:15 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lh.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2295 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:16 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lhu.hex" 
+# Start time: 12:55:16 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lhu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2385 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:16 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lui.hex" 
+# Start time: 12:55:16 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lui.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 495 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:16 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/lw.hex" 
+# Start time: 12:55:16 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/lw.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2435 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:17 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/or.hex" 
+# Start time: 12:55:17 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/or.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4725 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:17 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/ori.hex" 
+# Start time: 12:55:17 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/ori.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 1895 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:17 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sb.hex" 
+# Start time: 12:55:17 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sb.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4025 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:18 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sh.hex" 
+# Start time: 12:55:18 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sh.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4555 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:18 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/simple.hex" 
+# Start time: 12:55:18 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/simple.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 255 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:18 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sll.hex" 
+# Start time: 12:55:18 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sll.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4775 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:19 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/slli.hex" 
+# Start time: 12:55:19 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/slli.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2255 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:19 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/slt.hex" 
+# Start time: 12:55:19 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/slt.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4435 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:19 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/slti.hex" 
+# Start time: 12:55:19 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/slti.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2215 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:20 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sltiu.hex" 
+# Start time: 12:55:20 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sltiu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2215 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:20 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sltu.hex" 
+# Start time: 12:55:20 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sltu.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4435 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:20 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sra.hex" 
+# Start time: 12:55:20 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sra.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4965 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:21 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/srai.hex" 
+# Start time: 12:55:21 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/srai.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2405 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:21 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/srl.hex" 
+# Start time: 12:55:21 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/srl.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4905 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:21 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/srli.hex" 
+# Start time: 12:55:21 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/srli.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 2345 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:22 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/st_ld.hex" 
+# Start time: 12:55:22 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/st_ld.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4185 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:22 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sub.hex" 
+# Start time: 12:55:22 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sub.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4415 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:22 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/sw.hex" 
+# Start time: 12:55:22 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/sw.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4635 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:23 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/xor.hex" 
+# Start time: 12:55:23 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/xor.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 4715 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:23 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_rv32ui "+hex=C:/Users/User/rv32ui_tests/out/xori.hex" 
+# Start time: 12:55:23 on Oct 15,2026
+# Loading work.tb_rv32ui
+# Loading work.t1_riscv_cpu
+# Loading work.riscv_cpu
+# Loading work.controller
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.reset_ff
+# Loading work.adder
+# Loading work.reg_file
+# Loading work.imm_extend
+# Loading work.mux2
+# Loading work.alu
+# Loading work.mux4
+# Loading work.instr_mem
+# Loading work.data_mem
+# PASS  C:/Users/User/rv32ui_tests/out/xori.hex
+# ** Note: $finish    : .test/tb_rv32ui.v(41)
+#    Time: 1915 ns  Iteration: 1  Instance: /tb_rv32ui
+# Break in Module tb_rv32ui at .test/tb_rv32ui.v line 41
+# Stopped at .test/tb_rv32ui.v line 41
+# End time: 12:55:23 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

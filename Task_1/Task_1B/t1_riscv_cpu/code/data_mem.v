@@ -1,7 +1,7 @@
 
 // data_mem.v - data memory
 
-module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
+module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 4096) (
     input       clk, wr_en,
     input       [ADDR_WIDTH-1:0] wr_addr, wr_data,
     output      [DATA_WIDTH-1:0] rd_data_mem
