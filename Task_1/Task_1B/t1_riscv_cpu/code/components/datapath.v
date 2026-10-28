@@ -15,7 +15,9 @@ module datapath (
     input  [31:0] Instr,
     output [31:0] Mem_WrAddr, Mem_WrData,
     input  [31:0] ReadData,
-    output [31:0] Result
+    output [31:0] Result,
+    input         Stall,
+    output [3:0]  Mem_ByteEn
 );
 
 wire [31:0] PCPlus4, PCTarget, AuiPC, luiPC, PCJalr;
@@ -25,7 +27,8 @@ reg  [31:0] LoadData;     // processed load data (byte/half/word, sign/zero exte
 // next PC logic
 mux3 #(32) pcmux(PCPlus4, PCTarget, ALUResult, {Jalr, PCSrc}, PCJalr);
 
-reset_ff #(32) pcreg(clk, reset, PCJalr, PC);
+wire [31:0] PCNext = Stall ? PC : PCJalr;
+reset_ff #(32) pcreg(clk, reset, PCNext, PC);
 adder          pcadd4(PC, 32'd4, PCPlus4);
 adder          pcaddbranch(PC, ImmExt, PCTarget);
 
@@ -38,7 +41,7 @@ mux2 #(32)     srcbmux(WriteData, ImmExt, ALUSrc, SrcB);
 alu            alu (SrcA, SrcB, ALUControl, ALUResult, Zero, SLT, SLTU);
 mux2 #(32) a (AuiPC, ImmExt, Instr[5], luiPC);
 
-// Optimized Load data processing - extract byte/halfword with shared sign/zero extension
+// Load data processing - extract byte/halfword with sign/zero extension
 wire [1:0]  byte_offset  = ALUResult[1:0];
 reg  [7:0]  loaded_byte;
 always @(*) begin
@@ -62,56 +65,17 @@ always @(*) begin
     endcase
 end
 
-// Store data processing - read-modify-write for SB and SH
-// Preserves existing memory contents for sub-word writes.
-// When memory is uninitialized (X in simulation), unwritten bytes fall back to WriteData.
-function [7:0] pick_byte;
-    input [7:0] rd;
-    input [7:0] wd;
-    begin
-        pick_byte = (^rd === 1'bx) ? wd : rd;
-    end
-endfunction
-
+// Store data and byte enables (no read-modify-write)
 reg [31:0] StoreData;
+reg [3:0]  ByteEn;
 always @(*) begin
-    case (Funct3)
-        3'b000: begin // SB - store byte
-            case (byte_offset)
-                2'b00: StoreData = {pick_byte(ReadData[31:24], WriteData[31:24]),
-                                    pick_byte(ReadData[23:16], WriteData[23:16]),
-                                    pick_byte(ReadData[15:8],  WriteData[15:8]),
-                                    WriteData[7:0]};
-                2'b01: StoreData = {pick_byte(ReadData[31:24], WriteData[31:24]),
-                                    pick_byte(ReadData[23:16], WriteData[23:16]),
-                                    WriteData[7:0],
-                                    pick_byte(ReadData[7:0],   WriteData[7:0])};
-                2'b10: StoreData = {pick_byte(ReadData[31:24], WriteData[31:24]),
-                                    WriteData[7:0],
-                                    pick_byte(ReadData[15:8],  WriteData[15:8]),
-                                    pick_byte(ReadData[7:0],   WriteData[7:0])};
-                2'b11: StoreData = {WriteData[7:0],
-                                    pick_byte(ReadData[23:16], WriteData[23:16]),
-                                    pick_byte(ReadData[15:8],  WriteData[15:8]),
-                                    pick_byte(ReadData[7:0],   WriteData[7:0])};
-            endcase
-        end
-        3'b001: begin // SH - store halfword
-            case (byte_offset[1])
-                1'b0: StoreData = {pick_byte(ReadData[31:24], WriteData[31:24]),
-                                   pick_byte(ReadData[23:16], WriteData[23:16]),
-                                   WriteData[15:0]};
-                1'b1: StoreData = {WriteData[15:0],
-                                   pick_byte(ReadData[15:8],  WriteData[15:8]),
-                                   pick_byte(ReadData[7:0],   WriteData[7:0])};
-            endcase
-        end
-        3'b010: begin // SW - store word
-            StoreData = WriteData;
-        end
-        default: StoreData = WriteData;
+    case (Funct3[1:0])
+        2'b00: begin StoreData = {4{WriteData[7:0]}};  ByteEn = 4'b0001 << byte_offset;            end // SB
+        2'b01: begin StoreData = {2{WriteData[15:0]}}; ByteEn = byte_offset[1] ? 4'b1100 : 4'b0011; end // SH
+        default: begin StoreData = WriteData;          ByteEn = 4'b1111;                            end // SW
     endcase
 end
+assign Mem_ByteEn = ByteEn;
 
 // Result Source
 mux4 #(32)     resultmux(ALUResult, LoadData, PCPlus4, luiPC, ResultSrc, Result);

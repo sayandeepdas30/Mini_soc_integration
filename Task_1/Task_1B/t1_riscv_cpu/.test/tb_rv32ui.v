@@ -1,13 +1,14 @@
 `timescale 1ns/1ps
 module tb_rv32ui;
+  parameter WAIT_CYCLES = 0;
   reg clk = 0, reset = 1;
   reg Ext_MemWrite = 0;
   reg [31:0] Ext_WriteData = 0, Ext_DataAdr = 0;
   wire MemWrite;
   wire [31:0] WriteData, DataAdr, ReadData, PC, Result;
 
-  t1_riscv_cpu uut (clk, reset, Ext_MemWrite, Ext_WriteData, Ext_DataAdr,
-                    MemWrite, WriteData, DataAdr, ReadData, PC, Result);
+  t1_riscv_cpu #(WAIT_CYCLES) uut (clk, reset, Ext_MemWrite, Ext_WriteData, Ext_DataAdr,
+                  MemWrite, WriteData, DataAdr, ReadData, PC, Result);
 
   always #5 clk = ~clk;
 
