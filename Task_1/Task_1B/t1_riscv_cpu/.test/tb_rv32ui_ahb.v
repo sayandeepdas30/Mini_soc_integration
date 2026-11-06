@@ -10,6 +10,8 @@ module tb_rv32ui_ahb;
 
   reg [8*256-1:0] hexfile;
   reg [31:0] last_pc;
+  reg err_seen = 0;
+  always @(posedge clk) if (uut.HRESP) err_seen <= 1;
   integer same, cycles;
 
   initial begin
@@ -30,11 +32,11 @@ module tb_rv32ui_ahb;
     end
 
     if (uut.rvcpu.dp.rf.reg_file_arr[3] == 1)
-      $display("PASS  %0s", hexfile);
+      $display("PASS  %0s  (HRESP seen: %0d)", hexfile, err_seen);
     else
-      $display("FAIL  %0s  x3=%0d  (sub-test %0d)", hexfile,
+      $display("FAIL  %0s  x3=%0d  (sub-test %0d)  (HRESP seen: %0d)", hexfile,
                uut.rvcpu.dp.rf.reg_file_arr[3],
-               uut.rvcpu.dp.rf.reg_file_arr[3] >> 1);
+               uut.rvcpu.dp.rf.reg_file_arr[3] >> 1, err_seen);
     $finish;
   end
 endmodule

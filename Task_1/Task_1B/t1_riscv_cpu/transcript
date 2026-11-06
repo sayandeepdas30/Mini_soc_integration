@@ -1,8 +1,8 @@
 # do run_all_ahb.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:09:11 on Nov 06,2026
-# vlog code/data_mem.v code/instr_mem.v code/riscv_cpu.v code/t1_riscv_cpu.v code/components/adder.v code/components/alu.v code/components/alu_decoder.v code/components/controller.v code/components/datapath.v code/components/imm_extend.v code/components/main_decoder.v code/components/mux2.v code/components/mux3.v code/components/mux4.v code/components/reg_file.v code/components/reset_ff.v soc/ahb_master.v soc/ahb_slave_mem.v soc/soc_top.v .test/tb_rv32ui_ahb.v 
+# Start time: 13:50:48 on Nov 06,2026
+# vlog code/data_mem.v code/instr_mem.v code/riscv_cpu.v code/t1_riscv_cpu.v code/components/adder.v code/components/alu.v code/components/alu_decoder.v code/components/controller.v code/components/datapath.v code/components/imm_extend.v code/components/main_decoder.v code/components/mux2.v code/components/mux3.v code/components/mux4.v code/components/reg_file.v code/components/reset_ff.v soc/ahb_default_slave.v soc/ahb_interconnect.v soc/ahb_master.v soc/ahb_slave_mem.v soc/soc_top.v .test/tb_rv32ui_ahb.v 
 # -- Compiling module data_mem
 # -- Compiling module instr_mem
 # -- Compiling module riscv_cpu
@@ -19,6 +19,8 @@
 # -- Compiling module mux4
 # -- Compiling module reg_file
 # -- Compiling module reset_ff
+# -- Compiling module ahb_default_slave
+# -- Compiling module ahb_interconnect
 # -- Compiling module ahb_master
 # -- Compiling module ahb_slave_mem
 # -- Compiling module soc_top
@@ -27,10 +29,10 @@
 # Top level modules:
 # 	t1_riscv_cpu
 # 	tb_rv32ui_ahb
-# End time: 12:09:11 on Nov 06,2026, Elapsed time: 0:00:00
+# End time: 13:50:48 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/add.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:12 on Nov 06,2026
+# Start time: 13:50:48 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -48,16 +50,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/add.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/add.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4495 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:12 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:48 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/addi.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:12 on Nov 06,2026
+# Start time: 13:50:49 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -75,16 +79,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/addi.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/addi.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2265 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:12 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:49 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/and.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:12 on Nov 06,2026
+# Start time: 13:50:49 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -102,16 +108,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/and.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/and.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4695 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:13 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:49 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/andi.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:13 on Nov 06,2026
+# Start time: 13:50:49 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -129,16 +137,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/andi.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/andi.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 1825 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:13 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:50 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/auipc.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:13 on Nov 06,2026
+# Start time: 13:50:50 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -156,16 +166,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/auipc.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/auipc.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 435 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:13 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:50 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/beq.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:13 on Nov 06,2026
+# Start time: 13:50:50 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -183,16 +195,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/beq.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/beq.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:14 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:50 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/bge.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:14 on Nov 06,2026
+# Start time: 13:50:50 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -210,16 +224,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/bge.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/bge.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2935 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:14 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:51 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/bgeu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:14 on Nov 06,2026
+# Start time: 13:50:51 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -237,16 +253,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/bgeu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/bgeu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3185 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:14 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:51 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/blt.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:14 on Nov 06,2026
+# Start time: 13:50:51 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -264,16 +282,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/blt.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/blt.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:15 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:51 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/bltu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:15 on Nov 06,2026
+# Start time: 13:50:51 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -291,16 +311,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/bltu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/bltu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3005 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:15 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:52 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/bne.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:15 on Nov 06,2026
+# Start time: 13:50:52 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -318,16 +340,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/bne.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/bne.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2755 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:15 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:52 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/jal.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:15 on Nov 06,2026
+# Start time: 13:50:52 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -345,16 +369,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/jal.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/jal.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 395 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:16 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:52 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/jalr.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:16 on Nov 06,2026
+# Start time: 13:50:52 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -372,16 +398,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/jalr.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/jalr.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 995 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:16 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:53 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lb.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:16 on Nov 06,2026
+# Start time: 13:50:53 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -399,16 +427,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lb.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lb.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3095 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:17 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:53 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lbu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:17 on Nov 06,2026
+# Start time: 13:50:53 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -426,16 +456,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lbu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lbu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3095 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:17 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:53 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/ld_st.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:17 on Nov 06,2026
+# Start time: 13:50:53 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -453,16 +485,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/ld_st.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/ld_st.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 24915 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:17 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:54 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lh.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:17 on Nov 06,2026
+# Start time: 13:50:54 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -480,16 +514,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lh.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lh.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3255 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:18 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:54 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lhu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:18 on Nov 06,2026
+# Start time: 13:50:54 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -507,16 +543,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lhu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lhu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3345 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:18 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:54 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lui.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:18 on Nov 06,2026
+# Start time: 13:50:54 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -534,16 +572,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lui.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lui.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 495 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:18 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:55 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/lw.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:18 on Nov 06,2026
+# Start time: 13:50:55 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -561,16 +601,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/lw.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/lw.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 3395 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:19 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:55 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/or.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:19 on Nov 06,2026
+# Start time: 13:50:55 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -588,16 +630,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/or.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/or.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4725 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:19 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:55 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/ori.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:19 on Nov 06,2026
+# Start time: 13:50:55 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -615,16 +659,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/ori.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/ori.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 1895 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:19 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:56 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sb.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:19 on Nov 06,2026
+# Start time: 13:50:56 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -642,16 +688,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sb.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sb.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 6785 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:20 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:56 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sh.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:20 on Nov 06,2026
+# Start time: 13:50:56 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -669,16 +717,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sh.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sh.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 7315 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:20 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:56 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/simple.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:20 on Nov 06,2026
+# Start time: 13:50:56 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -696,16 +746,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/simple.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/simple.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 255 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:20 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:57 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sll.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:21 on Nov 06,2026
+# Start time: 13:50:57 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -723,16 +775,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sll.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sll.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4775 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:21 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:57 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/slli.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:21 on Nov 06,2026
+# Start time: 13:50:57 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -750,16 +804,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/slli.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/slli.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2255 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:21 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:57 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/slt.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:21 on Nov 06,2026
+# Start time: 13:50:57 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -777,16 +833,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/slt.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/slt.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4435 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:22 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:58 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/slti.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:22 on Nov 06,2026
+# Start time: 13:50:58 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -804,16 +862,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/slti.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/slti.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2215 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:22 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:58 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sltiu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:22 on Nov 06,2026
+# Start time: 13:50:58 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -831,16 +891,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sltiu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sltiu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2215 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:22 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:58 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sltu.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:22 on Nov 06,2026
+# Start time: 13:50:58 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -858,16 +920,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sltu.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sltu.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4435 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:23 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:59 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sra.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:23 on Nov 06,2026
+# Start time: 13:50:59 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -885,16 +949,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sra.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sra.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4965 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:23 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:59 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/srai.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:23 on Nov 06,2026
+# Start time: 13:50:59 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -912,16 +978,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/srai.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/srai.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2405 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:23 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:50:59 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/srl.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:23 on Nov 06,2026
+# Start time: 13:50:59 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -939,16 +1007,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/srl.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/srl.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4905 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:24 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:00 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/srli.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:24 on Nov 06,2026
+# Start time: 13:51:00 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -966,16 +1036,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/srli.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/srli.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 2345 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:24 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:00 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/st_ld.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:24 on Nov 06,2026
+# Start time: 13:51:00 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -993,16 +1065,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/st_ld.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/st_ld.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 8105 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:24 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:00 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sub.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:24 on Nov 06,2026
+# Start time: 13:51:01 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -1020,16 +1094,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sub.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sub.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4415 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:25 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:01 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/sw.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:25 on Nov 06,2026
+# Start time: 13:51:01 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -1047,16 +1123,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/sw.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/sw.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 7355 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:25 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:01 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/xor.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:25 on Nov 06,2026
+# Start time: 13:51:01 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -1074,16 +1152,18 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/xor.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/xor.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 4715 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:25 on Nov 06,2026, Elapsed time: 0:00:00
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:02 on Nov 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -onfinish stop work.tb_rv32ui_ahb "+hex=C:/Users/User/rv32ui_tests/out/xori.hex" -GWAIT_CYCLES=3 
-# Start time: 12:09:25 on Nov 06,2026
+# Start time: 13:51:02 on Nov 06,2026
 # Loading work.tb_rv32ui_ahb
 # Loading work.soc_top
 # Loading work.riscv_cpu
@@ -1101,11 +1181,13 @@
 # Loading work.mux4
 # Loading work.instr_mem
 # Loading work.ahb_master
+# Loading work.ahb_interconnect
 # Loading work.ahb_slave_mem
-# PASS  C:/Users/User/rv32ui_tests/out/xori.hex
-# ** Note: $finish    : .test/tb_rv32ui_ahb.v(38)
+# Loading work.ahb_default_slave
+# PASS  C:/Users/User/rv32ui_tests/out/xori.hex  (HRESP seen: 0)
+# ** Note: $finish    : .test/tb_rv32ui_ahb.v(40)
 #    Time: 1915 ns  Iteration: 1  Instance: /tb_rv32ui_ahb
-# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 38
-# Stopped at .test/tb_rv32ui_ahb.v line 38
-# End time: 12:09:26 on Nov 06,2026, Elapsed time: 0:00:01
+# Break in Module tb_rv32ui_ahb at .test/tb_rv32ui_ahb.v line 40
+# Stopped at .test/tb_rv32ui_ahb.v line 40
+# End time: 13:51:02 on Nov 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
